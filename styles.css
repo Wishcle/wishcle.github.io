@@ -8,6 +8,10 @@ header {
   font-weight: 800;
 }
 
+.greyed {
+  color: grey;
+}
+
 a {
   color: inherit;
   text-decoration: inherit;
