@@ -8,8 +8,13 @@ header {
   font-weight: 800;
 }
 
-div {
-  outline: 3px dotted red;
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 .animated > * {
