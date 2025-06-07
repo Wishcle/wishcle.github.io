@@ -1,4 +1,9 @@
 body {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+
   font-family: "Courier New", Courier, monospace;
   outline: 3px dotted green;
   background-color: rgb(40, 40, 40);
