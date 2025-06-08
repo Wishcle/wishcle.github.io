@@ -29,6 +29,42 @@ a:hover {
   text-decoration: underline;
 }
 
+.bus-list {
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+.bus {
+  display: inline-flex;
+  justify-content: center;
+  width: 2.7rem;
+  height: 2.7rem;
+  line-height: 2.7rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  color: white;
+  font-weight: bold;
+  box-sizing: border-box;
+  font-weight: normal;
+}
+
+.bus.new-route {
+  background-color: #4085fc;
+}
+
+.bus.old-route {
+  background-color: #0007ca;
+}
+
+.bus.small-text {
+  font-size: x-small;
+  font-weight: normal;
+}
+
 .animated > * {
   display: inline-block;
   position: relative;
