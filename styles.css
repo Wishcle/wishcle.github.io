@@ -4,16 +4,13 @@ body {
   margin: 0 auto;
   padding: 0 1rem;
   box-sizing: border-box;
-
   font-family: "Courier New", Courier, monospace;
-  outline: 3px dotted green;
-  background-color: rgb(40, 40, 40);
-  color: rgb(220, 220, 220);
 }
 
 header {
   font-size: large;
   font-weight: bold;
+  padding-bottom: 1em;
 }
 
 .greyed {
@@ -27,6 +24,22 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+.pill {
+  border-radius: 1em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
+
+.bg-black { background: black; color: white; }
+.bg-hotpink { background: hotpink; }
+.bg-orange { background: orange; }
+.bg-cyan { background: cyan; }
+
+.nav-selected {
+  border-radius: 1em;
+  border-color: black;
 }
 
 .bus-list {
