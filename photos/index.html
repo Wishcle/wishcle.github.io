@@ -3,6 +3,57 @@
     <title>riley website</title>
     <link rel="icon" href="../assets/favicon-16.png" type="image/x-icon" />
     <link rel="stylesheet" href="../styles.css" />
+    <script>
+      let loadImages = async () => {
+        const images = [
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0552.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0562.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0599.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0612.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0626.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0635.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0936.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0958.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0997.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_0999.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1008.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1018.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1035.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1036.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1128.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1141.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1183.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1192.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1252.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1261.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1267.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1271.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1316.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1335.JPG",
+          "https://d3dt2vfw6hdfn0.cloudfront.net/IMG_1373.JPG",
+        ];
+
+        const addImageToContainer = (container, image) => {
+          return new Promise((resolve, reject) => {
+            const img = document.createElement('img');
+            img.src = image;
+            img.onload = () => {
+              container.appendChild(img);
+              resolve(img);
+            };
+          });
+        };
+
+        container = document.getElementById("images-div")
+        for (const image of images) {
+          await addImageToContainer(container, image);
+        }
+      }
+
+      window.onload = () => {
+        loadImages();
+      };
+    </script>
   </head>
   <body>
     <header>
@@ -14,14 +65,8 @@
         <b class="pill bg-hotpink">/<a href="../collections">collections</a>/</b>
       </nav>
     </header>
-    <nav>
-      <b>/<a href="../">home</a>/</b>
-      <b>/<a href="../photos">photos</a>/</b>
-      <b>/<a href="../profiles">profiles</a>/</b>
-      <b>/<a href="../collections">collections</a>/</b>
-    </nav>
-    <p>photos photos photos</p>
-    <p>photos photos photos</p>
-    <p>photos photos photos</p>
+    <div id="images-div">
+      <!-- IMAGES LOAD HERE. -->
+    </div>
   </body>
 </html>
